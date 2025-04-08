@@ -7,7 +7,8 @@ function generatePixels(size) {
         row.classList.add("row");
         for (let j = 0; j < size; j++) {    
             const pixel = document.createElement("div");
-            pixel.id = "pixel";
+            pixel.classList.add("pixel");
+            if (i === (size-1)/2 && j === (size-1)/2) {pixel.id = "entered";}
             row.appendChild(pixel);
         }
         container.appendChild(row); 
