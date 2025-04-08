@@ -15,12 +15,18 @@ function generatePixels(size) {
     }
 }
 
-
 function changeGrid(size) {
     let rows = document.querySelectorAll(".row");
     rows.forEach((row) => {container.removeChild(row)});
     generatePixels(size);
     pixelNumber = size;
 }
+
+container.addEventListener('click', (e)=>{
+    let targetPixel = e.target;
+    if (targetPixel.classList == "pixel") {
+        targetPixel.id = "entered";
+    }
+})
 
 generatePixels(13);
