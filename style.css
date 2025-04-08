@@ -2,11 +2,12 @@
 .container {
     display: flex;
     flex-direction: column;
-    min-height: 300px;
-    min-width: 300px;
-    border: 1px solid black;
+    height: 90vw;
+    width: 90vw;
     flex-shrink: 1;
     margin: 50px 10px;
+    padding: 5px;
+    background-color: black;
 }
 
 .row {
@@ -17,8 +18,10 @@
 
 
 #pixel {
+    margin: 2px;
     flex-grow: 1;
     min-height: 1px;
     min-width: 1px;
-    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgb(80, 70, 70);
 }
