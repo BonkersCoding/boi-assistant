@@ -11,15 +11,38 @@
         <h1>CURSE OF THE LOST ASSISTANT</h1>
         <div class="options"></div>
     </header>
-    <p>Click a room to mark it as not entered. you can change room info under the mini map.</p>
-    <div class="container"></div>
-    <div class="options">
-        <div class="status">
-            <button id="selected">Not explored</button>
-            <button id="entered">Explored</button>
-            <button id="default">Delete room</button>
+    <div class="wrapper">
+        <div class="container"></div>
+        <div class="options">
+            <div class="status">
+                <button id="selected">Not explored</button>
+                <button id="explored">Explored</button>
+                <button id="red">Red room</button>
+                <button id="default">Delete room</button>
+            </div>
+            <div class="rooms">
+                <p>Room type</p>
+                <div class="room-type">
+                    <button id="normal">Normal room</button>
+                    <button id="treasure">Treasure room</button>
+                    <button id="boss">Boss room</button>
+                    <button id="mini-boss">Mini boss room</button>
+                    <button id="planetarium">Planetarium</button>
+                    <button id="shop">Shop</button>
+                    <button id="arcade">Arcade</button>
+                    <button id="challenge">Challenge room</button>
+                    <button id="boss-challenge">Boss challenge room</button>
+                    <button id="curse">Curse room</button>
+                    <button id="sacrifice">Sacrifice room</button>
+                    <button id="secret">Secret room</button>
+                    <button id="super-secret">Super secret room</button>
+                    <button id="ultra-secret">Ultra secret room</button>
+                    <button id="library">Library</button>
+                    <button id="mirror">Mirror room</button>
+                    <button id="mine">Mine cart room</button>
+                </div>
+            </div>
         </div>
-        <div class="room type"></div>
     </div>
     <div class="footer">Made by <a href="https://github.com/BonkersCoding">BonkersCoding</a> </div>    
 <script src="javascript.js"></script>
