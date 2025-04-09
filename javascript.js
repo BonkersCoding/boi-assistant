@@ -8,24 +8,24 @@ function generatePixels(size) {
         for (let j = 0; j < size; j++) {    
             const pixel = document.createElement("div");
             pixel.classList.add("pixel");
-            if (i === (size-1)/2 && j === (size-1)/2) {pixel.id = "entered";}
+            if (i === (size-1)/2 && j === (size-1)/2) {pixel.classList.add("entered");}
             row.appendChild(pixel);
         }
         container.appendChild(row); 
     }
 }
-
+/* CHANGE GRID SIZE
 function changeGrid(size) {
     let rows = document.querySelectorAll(".row");
     rows.forEach((row) => {container.removeChild(row)});
     generatePixels(size);
     pixelNumber = size;
 }
-
+*/
 container.addEventListener('click', (e)=>{
     let targetPixel = e.target;
     if (targetPixel.classList == "pixel") {
-        targetPixel.id = "entered";
+        targetPixel.classList.add("selected");
     }
 })
 

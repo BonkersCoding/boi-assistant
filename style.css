@@ -41,6 +41,10 @@ body {
 
 
 
-#entered {
+.entered {
     background-color: rgb(255, 255, 255);
+}
+
+.selected {
+    background-color: rgb(68, 66, 66);
 }
