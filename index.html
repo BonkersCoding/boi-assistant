@@ -9,12 +9,75 @@
 <body>
     <header>
         <h1>CURSE OF THE LOST ASSISTANT</h1>
-        <div class="options"></div>
     </header>
     <div class="wrapper">
-        <div class="info">
+        <div class="left">
             <div class="square"></div>
-            <p>When you choose a room, it's info will be shown in this window</p>
+            <p>Room zoom</p>
+
+            <div class="rooms">
+                <p>Room type</p>
+                <div class="room-type">
+                    <button id="normal">Normal room</button>
+                    <button id="treasure">
+                    <img src="./imgs/rooms/treasure.webp" alt="Treasure room" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
+                    </button>                    
+                    <button id="boss">
+                    <img src="./imgs/rooms/boss.webp" alt="Boss room" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
+                    </button>                    
+                    <button id="mini-boss">
+                    <img src="./imgs/rooms/mini-boss.webp" alt="Mini boss room" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
+                    </button>                    
+                    <button id="planetarium">
+                    <img src="./imgs/rooms/planetarium.webp" alt="Planetarium" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
+                    </button>                    
+                    <button id="shop">
+                    <img src="./imgs/rooms/shop.webp" alt="Shop" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
+                    </button>                    
+                    <button id="arcade">
+                    <img src="./imgs/rooms/arcade.webp" alt="Arcade" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
+                    </button>                    
+                    <button id="challenge">
+                    <img src="./imgs/rooms/challenge.webp" alt="Challenge room" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
+                    </button>                    
+                    <button id="boss-challenge">
+                    <img src="./imgs/rooms/boss-challenge.webp" alt="Boss challenge room" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
+                    </button>                    
+                    <button id="curse">
+                    <img src="./imgs/rooms/curse.webp" alt="Curse room" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
+                    </button>                    
+                    <button id="sacrifice">
+                    <img src="./imgs/rooms/sacrifice.webp" alt="Sacrifice room" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
+                    </button>                    
+                    <button id="secret">
+                    <img src="./imgs/rooms/secret.webp" alt="Secret room" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
+                    </button>                    
+                    <button id="super-secret">
+                    <img src="./imgs/rooms/super-secret.webp" alt="Super secret room" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
+                    </button>                    
+                    <button id="ultra-secret">
+                    <img src="./imgs/rooms/ultra-secret.webp" alt="Ultra secret room" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
+                    </button>                    
+                    <button id="library">
+                    <img src="./imgs/rooms/library.webp" alt="Library" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
+                    </button>                    
+                    <button id="mirror">
+                    <img src="./imgs/rooms/mirror.webp" alt="Mirror room" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
+                    </button>                    
+                    <button id="mine-cart">
+                    <img src="./imgs/rooms/mine-cart.webp" alt="Mine cart room" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
+                    </button>                    
+                    <button id="dice">
+                    <img src="./imgs/rooms/dice.webp" alt="Dice room" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
+                    </button>                    
+                    <button id="vault">
+                    <img src="./imgs/rooms/vault.webp" alt="Vault" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
+                    </button>                    
+                    <button id="bedroom">
+                    <img src="./imgs/rooms/bedroom.webp" alt="Bedroom" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
+                    </button>                      
+                </div>
+            </div>
         </div> 
         <div class="grid">
             <div class="container"></div>
@@ -26,279 +89,111 @@
             </div>
         </div>
         <div class="options">
-            <div class="rooms">
-                <p>Room type</p>
-                <div class="room-type">
-                    <button id="normal">Normal room</button>
-                    
-                    <button id="treasure">
-                    <img src="./imgs/rooms/treasure.webp" alt="Treasure room" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                    Treasure room
-                    </button>
-                    
-                    <button id="boss">
-                    <img src="./imgs/rooms/boss.webp" alt="Boss room" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                    Boss room
-                    </button>
-                    
-                    <button id="mini-boss">
-                    <img src="./imgs/rooms/mini-boss.webp" alt="Mini boss room" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                    Mini boss room
-                    </button>
-                    
-                    <button id="planetarium">
-                    <img src="./imgs/rooms/planetarium.webp" alt="Planetarium" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                    Planetarium
-                    </button>
-                    
-                    <button id="shop">
-                    <img src="./imgs/rooms/shop.webp" alt="Shop" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                    Shop
-                    </button>
-                    
-                    <button id="arcade">
-                    <img src="./imgs/rooms/arcade.webp" alt="Arcade" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                    Arcade
-                    </button>
-                    
-                    <button id="challenge">
-                    <img src="./imgs/rooms/challenge.webp" alt="Challenge room" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                    Challenge room
-                    </button>
-                    
-                    <button id="boss-challenge">
-                    <img src="./imgs/rooms/boss-challenge.webp" alt="Boss challenge room" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                    Boss challenge room
-                    </button>
-                    
-                    <button id="curse">
-                    <img src="./imgs/rooms/curse.webp" alt="Curse room" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                    Curse room
-                    </button>
-                    
-                    <button id="sacrifice">
-                    <img src="./imgs/rooms/sacrifice.webp" alt="Sacrifice room" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                    Sacrifice room
-                    </button>
-                    
-                    <button id="secret">
-                    <img src="./imgs/rooms/secret.webp" alt="Secret room" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                    Secret room
-                    </button>
-                    
-                    <button id="super-secret">
-                    <img src="./imgs/rooms/super-secret.webp" alt="Super secret room" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                    Super secret room
-                    </button>
-                    
-                    <button id="ultra-secret">
-                    <img src="./imgs/rooms/ultra-secret.webp" alt="Ultra secret room" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                    Ultra secret room
-                    </button>
-                    
-                    <button id="library">
-                    <img src="./imgs/rooms/library.webp" alt="Library" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                    Library
-                    </button>
-                    
-                    <button id="mirror">
-                    <img src="./imgs/rooms/mirror.webp" alt="Mirror room" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                    Mirror room
-                    </button>
-                    
-                    <button id="mine-cart">
-                    <img src="./imgs/rooms/mine-cart.webp" alt="Mine cart room" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                    Mine cart room
-                    </button>
-                    
-                    <button id="dice">
-                    <img src="./imgs/rooms/dice.webp" alt="Dice room" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                    Dice room
-                    </button>
-                    
-                    <button id="vault">
-                    <img src="./imgs/rooms/vault.webp" alt="Vault" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                    Vault
-                    </button>
-                    
-                    <button id="bedroom">
-                    <img src="./imgs/rooms/bedroom.webp" alt="Bedroom" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                    Bedroom
-                    </button>
-                      
-                </div>
-            </div>
             <div class="pickups">
                 <p>Pickups</p>
                 <div class="pickup-type">
                     <button id="red-heart">
                         <img src="./imgs/pickups/red-heart.webp" alt="Red Heart" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                        Red Heart
-                      </button>
-                      
+                      </button>                      
                       <button id="half-red-heart">
                         <img src="./imgs/pickups/half-red-heart.webp" alt="Half Red Heart" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                        Half Red Heart
-                      </button>
-                      
+                      </button>                      
                       <button id="soul-heart">
                         <img src="./imgs/pickups/soul-heart.webp" alt="Soul Heart" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                        Soul Heart
-                      </button>
-                      
+                      </button>                      
                       <button id="black-heart">
                         <img src="./imgs/pickups/black-heart.webp" alt="Black Heart" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                        Black Heart
-                      </button>
-                      
+                      </button>                      
                       <button id="eternal-heart">
                         <img src="./imgs/pickups/eternal-heart.webp" alt="Eternal Heart" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                        Eternal Heart
-                      </button>
-                      
+                      </button>                      
                       <button id="blended-heart">
                         <img src="./imgs/pickups/blended-heart.webp" alt="Blended Heart" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                        Blended Heart
-                      </button>
-                      
+                      </button>                      
                       <button id="golden-heart">
                         <img src="./imgs/pickups/golden-heart.webp" alt="Golden Heart" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                        Golden Heart
-                      </button>
-                      
+                      </button>                      
                       <button id="rotten-heart">
                         <img src="./imgs/pickups/rotten-heart.webp" alt="Rotten Heart" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                        Rotten Heart
-                      </button>
-                      
+                      </button>                      
                       <button id="bone-heart">
                         <img src="./imgs/pickups/bone-heart.webp" alt="Bone Heart" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                        Bone Heart
-                      </button>
-                      
+                      </button>                      
                       <button id="penny">
                         <img src="./imgs/pickups/penny.webp" alt="Penny" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                        Penny
-                      </button>
-                      
+                      </button>                      
                       <button id="nickel">
                         <img src="./imgs/pickups/nickel.webp" alt="Nickel" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                        Nickel
-                      </button>
-                      
+                      </button>                      
                       <button id="dime">
                         <img src="./imgs/pickups/dime.webp" alt="Dime" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                        Dime
-                      </button>
-                      
+                      </button>                      
                       <button id="lucky-penny">
                         <img src="./imgs/pickups/lucky-penny.webp" alt="Lucky Penny" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                        Lucky Penny
-                      </button>
-                      
+                      </button>                      
                       <button id="golden-penny">
                         <img src="./imgs/pickups/golden-penny.webp" alt="Golden Penny" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                        Golden penny
-                      </button>
-                      
+                      </button>                      
                       <button id="bomb">
                         <img src="./imgs/pickups/bomb.webp" alt="Bomb" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                        Bomb
-                      </button>
-                      
+                      </button>                      
                       <button id="golden-bomb">
                         <img src="./imgs/pickups/golden-bomb.webp" alt="Golden Bomb" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                        Golden Bomb
-                      </button>
-                      
+                      </button>                      
                       <button id="key">
                         <img src="./imgs/pickups/key.webp" alt="Key" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                        Key
-                      </button>
-                      
+                      </button>                      
                       <button id="golden-key">
                         <img src="./imgs/pickups/golden-key.webp" alt="Golden Key" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                        Golden Key
-                      </button>
-                      
+                      </button>                      
                       <button id="charged-key">
                         <img src="./imgs/pickups/charged-key.webp" alt="Charged Key" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                        Charged Key
-                      </button>
-                      
+                      </button>                      
                       <button id="micro-battery">
                         <img src="./imgs/pickups/micro-battery.webp" alt="Micro Battery" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                        Micro Battery
-                      </button>
-                      
+                      </button>                      
                       <button id="battery">
                         <img src="./imgs/pickups/battery.webp" alt="Battery" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                        Battery
-                      </button>
-                      
+                      </button>                      
                       <button id="mega-battery">
                         <img src="./imgs/pickups/mega-battery.webp" alt="Mega Battery" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                        Mega Battery
-                      </button>
-                      
+                      </button>                      
                       <button id="card">
                         <img src="./imgs/pickups/card.webp" alt="Card" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                        Card
-                      </button>
-                      
+                      </button>                      
                       <button id="rune">
                         <img src="./imgs/pickups/rune.webp" alt="Rune" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                        Rune
-                      </button>
-                      
+                      </button>                      
                       <button id="pill">
                         <img src="./imgs/pickups/pill.webp" alt="Pill" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                        Pill
-                      </button>
-                      
+                      </button>                      
                       <button id="trinket">
                         <img src="./imgs/pickups/trinket.webp" alt="Trinket" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                        Trinket
-                      </button>
-                      
+                      </button>                      
                       <button id="chest">
                         <img src="./imgs/pickups/chest.webp" alt="Chest" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                        Chest
-                      </button>
-                      
+                      </button>                      
                       <button id="golden-chest">
                         <img src="./imgs/pickups/golden-chest.webp" alt="Golden Chest" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                        Golden Chest
-                      </button>
-                      
+                      </button>                      
                       <button id="red-chest">
                         <img src="./imgs/pickups/red-chest.webp" alt="Red Chest" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                        Red Chest
-                      </button>
-                      
+                      </button>                      
                       <button id="eternal-chest">
                         <img src="./imgs/pickups/eternal-chest.webp" alt="Eternal Chest" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                        Eternal Chest
-                      </button>
-                      
+                      </button>                      
                       <button id="mimic-chest">
                         <img src="./imgs/pickups/mimic-chest.webp" alt="Mimic Chest" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                        Mimic Chest
-                      </button>
-                      
+                      </button>                      
                       <button id="dice-shard">
                         <img src="./imgs/pickups/dice-shard.webp" alt="Dice Shard" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                        Dice Shard
-                      </button>
-                      
+                      </button>                      
                       <button id="cracked-key">
                         <img src="./imgs/pickups/cracked-key.webp" alt="Cracked Key" width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-                        Cracked Key
-                      </button>
-                      
+                      </button>                      
+                </div>
             </div>
         </div>
-    </div>
     </div>
     <div class="footer">Made by <a href="https://github.com/BonkersCoding">BonkersCoding</a> </div>    
 <script src="javascript.js"></script>
