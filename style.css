@@ -24,11 +24,16 @@ button {
     align-items: center;
 }
 
+.grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .container {
     display: flex;
     flex-direction: column;
-    width: 90vh;
+    width: 70vh;
     aspect-ratio: 1 / 1;
     flex-shrink: 0.5;
     margin: 50px 10px;
@@ -56,7 +61,7 @@ button {
 
 .info {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
 }
@@ -66,6 +71,13 @@ button {
     aspect-ratio: 1 /1;
     border: 1px solid black;
     margin: 10px;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
 }
 
 
