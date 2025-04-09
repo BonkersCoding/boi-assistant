@@ -6,7 +6,7 @@ body {
     align-items: center;
     justify-content: space-between;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: rgb(51, 50, 50);
+    background-color: rgb(208, 205, 205);
 }
 
 button {
@@ -55,10 +55,11 @@ p {
 .container {
     display: flex;
     flex-direction: column;
-    width: 70vh;
+    min-height: 70vh;
+    flex-grow: 1;
     aspect-ratio: 1 / 1;
     flex-shrink: 0.5;
-    margin: 0 80px;
+    margin: 0 50px;
     padding: 3px;
     border-radius: 5px;
     background-color: black;
@@ -74,8 +75,6 @@ p {
 .pixel {
     margin: 1px;
     flex-grow: 1;
-    min-height: 1px;
-    min-width: 1px;
     border: 1px solid black;
     border-radius: 5px;
     background-color: rgb(37, 37, 37);
@@ -86,12 +85,13 @@ p {
     height: 200px;
     aspect-ratio: 1 /1;
     border: 1px solid black;
+    background-color: whitesmoke;
     margin: 10px;
 }
 
 
 .entered {
-    background-color: rgb(255, 255, 255);
+    background-color: whitesmoke;
 }
 
 
