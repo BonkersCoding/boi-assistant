@@ -29,4 +29,4 @@ container.addEventListener('click', (e)=>{
     }
 })
 
-generatePixels(13);
+generatePixels(21);
