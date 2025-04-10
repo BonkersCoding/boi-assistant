@@ -2,6 +2,8 @@ const container = document.querySelector(".container");
 const right = document.querySelector(".right");
 const roomZoom = document.querySelector(".square");
 const option = document.querySelector(".options");
+const notEntered = document.querySelector("#not-entered");
+let zoomPixel;
 let targetPixel;
 
 
@@ -14,7 +16,8 @@ function generatePixels(size) {
             pixel.classList.add("pixel");
             if (i === (size-1)/2 && j === (size-1)/2) {
                 targetPixel = pixel;
-                pixel.classList.add("entered", "selected");
+                targetPixel.style.backgroundColor = "whitesmoke";
+                targetPixel.classList.toggle("selected");
             }
             row.appendChild(pixel);
         }
@@ -34,6 +37,10 @@ container.addEventListener('click', (e)=>{
     targetPixel.classList.toggle("selected");
     targetPixel = e.target;
     targetPixel.classList.add("selected");
+    let color = targetPixel.style.backgroundColor;
+    if (color == "") {
+        notEntered.click();
+    }
     addZoom(targetPixel); }
 })
 
@@ -50,23 +57,17 @@ option.addEventListener('click', (e)=>{
     let targetBtn = e.target;
     let type = targetBtn.nodeName;
     if(type === "BUTTON") {
-       let choice = targetBtn.id;
-       switch (choice) {
-        case "not-entered":
-            targetPixel.style.backgroundColor = "#747474";
-            break;
-        case "entered":
-            targetPixel.style.backgroundColor = "whitesmoke";
-            break;
-        case "red":
-            targetPixel.style.backgroundColor = "#dd4444";
-            break;        
-        case "delete":
-            targetPixel.style.backgroundColor = "#2d2d2d";
-            break;
-        default: break;
-       }
+        changeColor(targetBtn);
     }
+})
+
+roomZoom.addEventListener('click', (e)=>{
+    let targetBtn = e.target;
+    let type = targetBtn.nodeName;
+    if(type === "IMG") {
+        targetPixel.removeChild(targetBtn);
+    }
+
 })
 
 function addIcon(target) {
@@ -80,9 +81,29 @@ function addZoom(pixel) {
     while (roomZoom.hasChildNodes()) {
         roomZoom.removeChild(roomZoom.firstChild);
     }
-    let zoomPixel = pixel.cloneNode(true);
+    zoomPixel = pixel.cloneNode(true);
+    zoomPixel.style.backgroundColor = "whitesmoke";
     roomZoom.appendChild(zoomPixel);
     
+}
+
+function changeColor(option) {  
+    let choice = option.id;
+    switch (choice) {
+     case `not-entered`:
+         targetPixel.style.backgroundColor = "#747474";
+         break;
+     case "entered":
+         targetPixel.style.backgroundColor = "whitesmoke";
+         break;
+     case "red":
+         targetPixel.style.backgroundColor = "#dd4444";
+         break;        
+     case "delete":
+         targetPixel.style.backgroundColor = "#2d2d2d";
+         break;
+     default: break;
+    }
 }
 
 generatePixels(17);
