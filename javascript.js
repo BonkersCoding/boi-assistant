@@ -1,5 +1,6 @@
 const container = document.querySelector(".container");
 const right = document.querySelector(".right");
+const roomZoom = document.querySelector(".square");
 let targetPixel;
 
 
@@ -28,13 +29,19 @@ function changeGrid(size) {
 }
 */
 container.addEventListener('click', (e)=>{
-    if(targetPixel.closest(".pixel")) { 
+    if(e.target.closest(".pixel")) { 
     targetPixel.classList.toggle("selected");
     targetPixel = e.target;
     targetPixel.classList.add("selected"); }
 })
 
-
+right.addEventListener('click', (e)=>{
+    let targetBtn = e.target;
+    let type = targetBtn.nodeName;
+    if(type === "IMG") {
+        addIcon(targetBtn);
+    }
+})   
 
 function addIcon(target) {
     let icon = document.createElement("img");
