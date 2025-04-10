@@ -1,4 +1,5 @@
 const container = document.querySelector(".container");
+const right = document.querySelector(".right");
 let targetPixel;
 
 
@@ -27,9 +28,20 @@ function changeGrid(size) {
 }
 */
 container.addEventListener('click', (e)=>{
+    if(targetPixel.closest(".pixel")) { 
     targetPixel.classList.toggle("selected");
     targetPixel = e.target;
-    targetPixel.classList.add("selected");
+    targetPixel.classList.add("selected"); }
 })
+
+
+
+function addIcon(target) {
+    let icon = document.createElement("img");
+    let iconName = target.id;
+    let folder = icon.closest(".rooms") || icon.closest(".pickups");
+    icon.src = `./imgs/${folder}/${iconName}.webp`    /*/imgs/rooms/vault.webp  ||  ./imgs/pickups/red-heart.webp" */
+    targetPixel.appendChild(icon);
+}
 
 generatePixels(17);
