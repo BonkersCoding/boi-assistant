@@ -1,4 +1,5 @@
 const container = document.querySelector(".container");
+let targetPixel;
 
 
 function generatePixels(size) {
@@ -8,7 +9,10 @@ function generatePixels(size) {
         for (let j = 0; j < size; j++) {    
             const pixel = document.createElement("div");
             pixel.classList.add("pixel");
-            if (i === (size-1)/2 && j === (size-1)/2) {pixel.classList.add("entered");}
+            if (i === (size-1)/2 && j === (size-1)/2) {
+                targetPixel = pixel;
+                pixel.classList.add("entered", "selected");
+            }
             row.appendChild(pixel);
         }
         container.appendChild(row); 
@@ -23,10 +27,9 @@ function changeGrid(size) {
 }
 */
 container.addEventListener('click', (e)=>{
-    let targetPixel = e.target;
-    if (targetPixel.classList === "pixel") {
-        targetPixel.classList.add("selected");
-    }
+    targetPixel.classList.toggle("selected");
+    targetPixel = e.target;
+    targetPixel.classList.add("selected");
 })
 
-generatePixels(21);
+generatePixels(17);
