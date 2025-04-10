@@ -6,7 +6,9 @@ body {
     align-items: center;
     justify-content: space-between;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: rgb(208, 205, 205);
+    color: whitesmoke;
+    background-image: url(./imgs/nightmares_bg_mask.png);
+    background-size: 100% 100%;
 }
 
 button {
@@ -19,7 +21,7 @@ button {
 p {
     font-weight: bold;
     width: inherit;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid whitesmoke;
     text-align: center;
     padding: 10px 0;
 }
