@@ -1,6 +1,7 @@
 const container = document.querySelector(".container");
 const right = document.querySelector(".right");
 const roomZoom = document.querySelector(".square");
+const option = document.querySelector(".options");
 let targetPixel;
 
 
@@ -32,7 +33,8 @@ container.addEventListener('click', (e)=>{
     if(e.target.closest(".pixel")) { 
     targetPixel.classList.toggle("selected");
     targetPixel = e.target;
-    targetPixel.classList.add("selected"); }
+    targetPixel.classList.add("selected");
+    addZoom(targetPixel); }
 })
 
 right.addEventListener('click', (e)=>{
@@ -42,7 +44,30 @@ right.addEventListener('click', (e)=>{
         addIcon(targetBtn);
         addZoom(targetPixel);
     }
-})   
+}) 
+
+option.addEventListener('click', (e)=>{
+    let targetBtn = e.target;
+    let type = targetBtn.nodeName;
+    if(type === "BUTTON") {
+       let choice = targetBtn.id;
+       switch (choice) {
+        case "not-entered":
+            targetPixel.style.backgroundColor = "#747474";
+            break;
+        case "entered":
+            targetPixel.style.backgroundColor = "whitesmoke";
+            break;
+        case "red":
+            targetPixel.style.backgroundColor = "#dd4444";
+            break;        
+        case "delete":
+            targetPixel.style.backgroundColor = "#2d2d2d";
+            break;
+        default: break;
+       }
+    }
+})
 
 function addIcon(target) {
     let location = target.src;
