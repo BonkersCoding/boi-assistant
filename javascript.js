@@ -44,10 +44,10 @@ right.addEventListener('click', (e)=>{
 })   
 
 function addIcon(target) {
+    let location = target.src;
     let icon = document.createElement("img");
-    let iconName = target.id;
-    let folder = icon.closest(".rooms") || icon.closest(".pickups");
-    icon.src = `./imgs/${folder}/${iconName}.webp`    /*/imgs/rooms/vault.webp  ||  ./imgs/pickups/red-heart.webp" */
+    icon.src = location;
+    icon.classList.add("on-grid"); 
     targetPixel.appendChild(icon);
 }
 
