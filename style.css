@@ -110,10 +110,11 @@ header {
 }
 
 .pixel img {
+    width: 20px;
     object-fit: contain;
     aspect-ratio: 1 / 1;
-    max-width: 25%;
-    max-height: 25%;
+    max-width: 50%;
+    max-height: 50%;
     display: block;
     margin: 0;
     padding: 0;

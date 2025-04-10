@@ -40,15 +40,24 @@ right.addEventListener('click', (e)=>{
     let type = targetBtn.nodeName;
     if(type === "IMG") {
         addIcon(targetBtn);
+        addZoom(targetPixel);
     }
 })   
 
 function addIcon(target) {
     let location = target.src;
     let icon = document.createElement("img");
-    icon.src = location;
-    icon.classList.add("on-grid"); 
+    icon.src = location; 
     targetPixel.appendChild(icon);
+}
+
+function addZoom(pixel) {
+    while (roomZoom.hasChildNodes()) {
+        roomZoom.removeChild(roomZoom.firstChild);
+    }
+    let zoomPixel = pixel.cloneNode(true);
+    roomZoom.appendChild(zoomPixel);
+    
 }
 
 generatePixels(17);
