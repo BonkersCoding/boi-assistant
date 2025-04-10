@@ -140,6 +140,5 @@ header {
 
 
 .selected {
-    box-shadow: inset -1px -1px 3px blue,
-                inset 1px 1px 3px blue;
+    border-color: blue;
 }

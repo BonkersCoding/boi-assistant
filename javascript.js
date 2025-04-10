@@ -99,8 +99,14 @@ function changeColor(option) {
      case "red":
          targetPixel.style.backgroundColor = "#dd4444";
          break;        
-     case "delete":
+     case "reset":
          targetPixel.style.backgroundColor = "#2d2d2d";
+         while (targetPixel.hasChildNodes()) {
+             targetPixel.removeChild(targetPixel.firstChild);
+         } 
+         while (roomZoom.hasChildNodes()) {
+             roomZoom.removeChild(roomZoom.firstChild);
+         }        
          break;
      default: break;
     }
