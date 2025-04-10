@@ -24,7 +24,7 @@ function changeGrid(size) {
 */
 container.addEventListener('click', (e)=>{
     let targetPixel = e.target;
-    if (targetPixel.classList == "pixel") {
+    if (targetPixel.classList === "pixel") {
         targetPixel.classList.add("selected");
     }
 })
