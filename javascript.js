@@ -49,7 +49,6 @@ right.addEventListener('click', (e)=>{
     let type = targetBtn.nodeName;
     if(type === "IMG") {
         addIcon(targetBtn);
-        addZoom(targetPixel);
     }
 }) 
 
@@ -65,12 +64,8 @@ roomZoom.addEventListener('click', (e)=>{
     let zoomView = document.getElementById("zoom-view");
     let targetBtn = e.target;
     let type = targetBtn.nodeName;
-    console.log(targetBtn, type);
     if(type === "IMG") {
         zoomView.removeChild(targetBtn);
-        let mapIcons = document.querySelectorAll("#map-icon");
-        console.log(mapIcons);
-        mapIcons.forEach((icon) => {targetPixel.removeChild(icon)});
     }
 
 })
@@ -79,15 +74,17 @@ function addIcon(target) {
     let location = target.src;
     let icon = document.createElement("img");
     icon.src = location; 
-    icon.id = "map-icon";
     targetPixel.appendChild(icon);
+    zoomView = targetPixel.cloneNode(true);
+    addZoom();    
+    icon.classList.add("map-icon");
+    
 }
 
-function addZoom(pixel) {   
+function addZoom() {   
     while (roomZoom.hasChildNodes()) {
         roomZoom.removeChild(roomZoom.firstChild);
     }
-    zoomView = pixel.cloneNode(true);
     zoomView.style.backgroundColor = "whitesmoke";
     zoomView.id = "zoom-view";
     roomZoom.appendChild(zoomView);
