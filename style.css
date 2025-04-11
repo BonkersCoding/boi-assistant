@@ -14,16 +14,18 @@ body {
 
 button {
    all: unset; 
-   padding: 5px;
+   padding: 10px;
+    margin: 5px 0;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 p {
     font-weight: bold;
     width: inherit;
-    border-bottom: 1px solid whitesmoke;
     text-align: center;
     padding-bottom: 10px;
-    margin-bottom: 10px;
     align-self: center;
 }
 
@@ -59,13 +61,21 @@ header {
     flex-direction: column;
     align-items: center;
     width: 10vw;
+    border-top: 2px solid white;
 }
+
+.room-zoom {
+    justify-content: center;
+    align-content: center;
+}
+    
 
 .rooms, .pickups { 
     width: 15vw;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-top: 2px solid whitesmoke;
 }
 
 .room-type, .pickup-type {
@@ -75,6 +85,7 @@ header {
 .right img {
     width: 30px;
     height: 30px;
+    padding: 5px;
     vertical-align: middle;
     object-fit: contain;
     image-rendering: pixelated;
@@ -120,16 +131,18 @@ header {
     width: 20px;
     object-fit: contain;
     aspect-ratio: 1 / 1;
-    max-width: 50%;
-    max-height: 50%;
+    max-width: 51%;
+    max-height: 51%;
     display: block;
     margin: 0;
-    padding: 0;
+    padding: 2px 0;
     pointer-events: none;
 }
 
 .room-zoom img {
+    padding: 5px;
     pointer-events: all;
+    min-height: 15%;
 }
 
 

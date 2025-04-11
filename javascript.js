@@ -134,4 +134,4 @@ function changeColor(option) {
     }
 }
 
-generatePixels(17);
+generatePixels(13);
