@@ -4,6 +4,7 @@ const roomZoom = document.querySelector(".square");
 const option = document.querySelector(".options");
 const notEntered = document.querySelector("#not-entered");
 let zoomView;
+let roomView;
 let targetPixel;
 
 
@@ -61,11 +62,22 @@ option.addEventListener('click', (e)=>{
 })
 
 roomZoom.addEventListener('click', (e)=>{
-    let zoomView = document.getElementById("zoom-view");
+    zoomView = document.getElementById("zoom-view");
     let targetBtn = e.target;
     let type = targetBtn.nodeName;
     if(type === "IMG") {
         zoomView.removeChild(targetBtn);
+        roomView = zoomView.cloneNode(true);
+        while (targetPixel.hasChildNodes()) {
+            targetPixel.removeChild(targetPixel.firstChild);
+        }
+        while (roomView.hasChildNodes()) {
+            console.log(roomView.firstChild);
+            targetPixel.appendChild(zoomView.firstChild);
+            roomView.removeChild(roomView.firstChild)
+            console.log(roomView);
+        }
+        addZoom(targetPixel);
     }
 
 })
@@ -74,10 +86,9 @@ function addIcon(target) {
     let location = target.src;
     let icon = document.createElement("img");
     icon.src = location; 
-    targetPixel.appendChild(icon);
-    zoomView = targetPixel.cloneNode(true);
-    addZoom();    
+    targetPixel.appendChild(icon);  
     icon.classList.add("map-icon");
+    addZoom();
     
 }
 
@@ -85,6 +96,9 @@ function addZoom() {
     while (roomZoom.hasChildNodes()) {
         roomZoom.removeChild(roomZoom.firstChild);
     }
+    zoomView = targetPixel.cloneNode(true);
+    zoomView.classList.toggle("selected");
+    zoomView.style.border = "none";
     zoomView.style.backgroundColor = "whitesmoke";
     zoomView.id = "zoom-view";
     roomZoom.appendChild(zoomView);
