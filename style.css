@@ -34,13 +34,16 @@ p {
 
 h1 {
     text-align: center;
-    font-size: 60px;
+    color: black;
+    font-size: 50px;
+    -webkit-text-stroke: 1px white;
 }
 
 header {
     width: 100vw;
     border-bottom: 2px solid #252525;
     padding: 5px 0;
+    flex-shrink: 1;
 }
 
 .wrapper {
