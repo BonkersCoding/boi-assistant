@@ -13,12 +13,15 @@ body {
 }
 
 button {
-   all: unset; 
-   padding: 10px;
+    all: unset; 
+    width: 200px;
+    text-align: center;
+    padding: 10px;
     margin: 5px 0;
     border: 1px solid whitesmoke;
     border-radius: 10px;
     cursor: pointer;
+
 }
 
 p {
@@ -50,6 +53,7 @@ header {
 .left, .right {
     height: 70vh;
     width: 30vw;
+    flex-grow: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
