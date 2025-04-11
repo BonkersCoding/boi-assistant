@@ -4,33 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="/imgs/favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="shortcut icon" href="/imgs/favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/imgs/favicon/apple-touch-icon.png" />
-    <link rel="manifest" href="/imgs/favicon/site.webmanifest" />
+    <link rel="icon" type="image/png" href="/imgs/favicomatic/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/imgs/favicomatic/favicon-16x16.png" sizes="16x16" /> 
+    <link rel="shortcut icon" href="imgs/favicomatic/favicon.ico">   
     <title>The Finding of Isaac</title>
 </head>
 <body>
-    <header>
-        <h1>THE FINDING OF ISAAC</h1>
-        <p>Click a room to select it - Click on room options to change color - Click on an icon to add it to the selected room - Click on an icon in Room Zoom to delete it</p>
-    </header>
+    <header><h1>THE FINDING OF ISAAC</h1></header>
     <div class="wrapper">
-        <div class="left">
+        <div class="top">
             <div class="room-zoom">
                 <p>Room zoom</p>
                 <div class="square"></div>
             </div>
-            <div class="options">
-                <p>Room options</p>
-                <button id="not-entered">Not entered</button>
-                <button id="entered">Entered</button>
-                <button id="red">Red room</button>
-                <button id="reset">Reset</button>
-            </div>
+            <ul>
+                <li>Click a room to select it</li>
+                <li>Click on room options to change color</li>
+                <li>Click on an icon to add it to the selected room</li>
+                <li>Click on an icon in Room Zoom to delete it</li>
+            </ul>
         </div> 
         <div class="container"></div>
-        <div class="right">
+        <div class="options">
+            <button id="not-entered">Not entered</button>
+            <button id="entered">Entered</button>
+            <button id="red">Red room</button>
+            <button id="reset">Reset</button>
+        </div>
+        <div class="bottom">
             <div class="rooms">
                 <p>Room type</p>
                 <div class="room-type">
@@ -94,6 +95,6 @@
         </div>
     </div>
     <div class="footer">Made by <a href="https://github.com/BonkersCoding">BonkersCoding</a> 2025</div>    
-<script src="javascript.js"></script>
+<script src="javascript.js" defer></script>
 </body>
 </html>

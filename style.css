@@ -1,112 +1,96 @@
 body {
     height: 100vh;
-    margin: 0;
-    padding: 0;
+    margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     font-family: "Courier New", Courier, monospace;
     color: whitesmoke;
-    background-image: url(./imgs/nightmares_bg_mask.png);
-    background-size: 100% 100%;
+    background-color: rgb(14, 14, 14);
 }
 
 button {
-    all: unset; 
-    width: 200px;
+    all: unset;
+    flex: 1;
+    max-width: 20%;
+    font-size: 2vw;
     text-align: center;
-    padding: 10px;
-    margin: 5px 0;
+    padding: 2% 2%;
     border: 1px solid whitesmoke;
     border-radius: 10px;
     cursor: pointer;
-
 }
 
 p {
-    font-weight: bold;
-    width: inherit;
+    font-size: 3vw;
     text-align: center;
-    padding-bottom: 10px;
-    align-self: center;
 }
 
 h1 {
+    font-size: 8vw;
     text-align: center;
     color: black;
-    font-size: 50px;
     -webkit-text-stroke: 1px white;
 }
 
 header {
-    width: 100vw;
-    border-bottom: 2px solid #252525;
-    padding: 5px 0;
-    flex-shrink: 1;
+    width: inherit;
 }
 
 .wrapper {
+    margin: 0 5%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
 }
 
-.left, .right {
-    height: 70vh;
-    width: 30vw;
-    flex-grow: 0;
+.top, .bottom, .options {
+    width: 100%;
+    margin: 2vw 0;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.options {
     justify-content: space-around;
-    align-items: center;
 }
 
-.room-zoom, .options {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 10vw;
-    border-top: 2px solid white;
+.top {
+    align-items: flex-end;
+}
+
+li {
+    
+    font-size: 1.5vw;
+    text-align: left;
+    max-height: 20%;
 }
 
 .room-zoom {
     justify-content: center;
     align-content: center;
 }
-    
-
-.rooms, .pickups { 
-    width: 15vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-top: 2px solid whitesmoke;
-}
 
 .room-type, .pickup-type {
     display: flex;
     flex-wrap: wrap;
 }
-.right img {
-    width: 30px;
-    height: 30px;
+
+img {
+    width: 5vw;
     padding: 5px;
     vertical-align: middle;
     object-fit: contain;
-    image-rendering: pixelated;
-  }
+}
   
 
 .container {
     display: flex;
     flex-direction: column;
-    height: 70vh;
-    flex-grow: 1;
+    width: 80vw;
     aspect-ratio: 1 / 1;
-    flex-shrink: 0.5;
-    margin: 0 50px;
     padding: 3px;
     border-radius: 5px;
     background-color: black;
@@ -135,38 +119,32 @@ header {
 }
 
 .pixel img {
-    width: 20px;
     object-fit: contain;
     aspect-ratio: 1 / 1;
-    max-width: 51%;
-    max-height: 51%;
+    max-width: 50%;
+    max-height: 50%;
     display: block;
     margin: 0;
-    padding: 2px 0;
     pointer-events: none;
 }
 
 .room-zoom img {
-    padding: 5px;
     pointer-events: all;
     min-height: 15%;
 }
 
 
 .square {
-    height: 200px;
+    height: 10vh;
     aspect-ratio: 1 /1;
     border: 1px solid black;
     background-color: whitesmoke;
-    margin: 10px;
-    flex: none;
 }
 
 .footer {
     width: 100vw;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px 0;
 }
 
 

@@ -1,5 +1,5 @@
 const container = document.querySelector(".container");
-const right = document.querySelector(".right");
+const bottom = document.querySelector(".bottom");
 const roomZoom = document.querySelector(".square");
 const option = document.querySelector(".options");
 const notEntered = document.querySelector("#not-entered");
@@ -45,7 +45,7 @@ container.addEventListener('click', (e)=>{
     addZoom(targetPixel); }
 })
 
-right.addEventListener('click', (e)=>{
+bottom.addEventListener('click', (e)=>{
     let targetBtn = e.target;
     let type = targetBtn.nodeName;
     if(type === "IMG") {
