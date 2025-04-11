@@ -66,17 +66,7 @@ roomZoom.addEventListener('click', (e)=>{
     let targetBtn = e.target;
     let type = targetBtn.nodeName;
     if(type === "IMG") {
-        zoomView.removeChild(targetBtn);
-        roomView = zoomView.cloneNode(true);
-        while (targetPixel.hasChildNodes()) {
-            targetPixel.removeChild(targetPixel.firstChild);
-        }
-        while (roomView.hasChildNodes()) {
-            console.log(roomView.firstChild);
-            targetPixel.appendChild(zoomView.firstChild);
-            roomView.removeChild(roomView.firstChild)
-            console.log(roomView);
-        }
+        removeIcon(targetBtn);
         addZoom(targetPixel);
     }
 
@@ -103,6 +93,20 @@ function addZoom() {
     zoomView.id = "zoom-view";
     roomZoom.appendChild(zoomView);
     
+}
+
+function removeIcon(target) {
+    
+    zoomView.removeChild(target);
+    roomView = zoomView.cloneNode(true);
+    while (targetPixel.hasChildNodes()) {
+        targetPixel.removeChild(targetPixel.firstChild);
+    }
+    while (roomView.hasChildNodes()) {
+        targetPixel.appendChild(zoomView.firstChild);
+        roomView.removeChild(roomView.firstChild);
+    }
+    addZoom(targetPixel);
 }
 
 function changeColor(option) {  
