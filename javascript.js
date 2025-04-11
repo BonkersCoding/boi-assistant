@@ -8,7 +8,10 @@ let roomView;
 let targetPixel;
 
 
-function generatePixels(size) {
+function generatePixels(size) {   
+    while (container.hasChildNodes()) {
+        container.removeChild(container.firstChild);
+    }    
     for (let i = 0; i < size; i++) {
         let row = document.createElement("div");
         row.classList.add("row");
@@ -129,7 +132,11 @@ function changeColor(option) {
          while (roomZoom.hasChildNodes()) {
              roomZoom.removeChild(roomZoom.firstChild);
          }        
-         break;
+         break;        
+         case "reset-map":
+             generatePixels(13);       
+             break;
+    
      default: break;
     }
 }
