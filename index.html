@@ -10,20 +10,18 @@
     <title>The Finding of Isaac</title>
 </head>
 <body>
-    <header><h1>THE FINDING OF ISAAC</h1></header>
+    <header>
+        <h1>THE FINDING OF ISAAC</h1>
+        <p>- Curse of the lost companion -</p>
+        <ul>
+            <li>Click a room to select it and see all pickups</li>
+            <li>Change color and add icons to the selected room</li>
+            <li>Click on an icon in Room Zoom to delete it</li>
+        </ul>
+    </header>
     <div class="wrapper">
-        <div class="top">
-            <div class="room-zoom">
-                <p>Room zoom</p>
-                <div class="square"></div>
-            </div>
-            <ul>
-                <li>Click a room to select it and see all pickups</li>
-                <li>Change color and add icons to the selected room</li>
-                <li>Click on an icon in Room Zoom to delete it</li>
-            </ul>
-        </div> 
         <div class="container"></div>
+        <div class="bottom">
         <div class="options">
             <button id="not-entered">Not entered</button>
             <button id="entered">Entered</button>
@@ -31,66 +29,69 @@
             <button id="reset">Reset room</button>
             <button id="reset-map">Reset map</button>
         </div>
-        <div class="bottom">
-            <div class="rooms">
-                <p>Room type</p>
-                <div class="room-type">
-                  <img id="treasure" src="./imgs/rooms/treasure.webp" alt="Treasure room" title="Treasure room">
-                  <img id="boss" src="./imgs/rooms/boss.webp" alt="Boss room" title="Boss room">
-                  <img id="mini-boss" src="./imgs/rooms/mini-boss.webp" alt="Mini boss room" title="Mini boss room">
-                  <img id="planetarium" src="./imgs/rooms/planetarium.webp" alt="Planetarium" title="Planetarium">
-                  <img id="shop" src="./imgs/rooms/shop.webp" alt="Shop" title="Shop">
-                  <img id="arcade" src="./imgs/rooms/arcade.webp" alt="Arcade" title="Arcade">
-                  <img id="challenge" src="./imgs/rooms/challenge.webp" alt="Challenge room" title="Challenge room">
-                  <img id="boss-challenge" src="./imgs/rooms/boss-challenge.webp" alt="Boss challenge room" title="Boss challenge room">
-                  <img id="curse" src="./imgs/rooms/curse.webp" alt="Curse room" title="Curse room">
-                  <img id="sacrifice" src="./imgs/rooms/sacrifice.webp" alt="Sacrifice room" title="Sacrifice room">
-                  <img id="secret" src="./imgs/rooms/secret.webp" alt="Secret room" title="Secret room">
-                  <img id="super-secret" src="./imgs/rooms/super-secret.webp" alt="Super secret room" title="Super secret room">
-                  <img id="ultra-secret" src="./imgs/rooms/ultra-secret.webp" alt="Ultra secret room" title="Ultra secret room">
-                  <img id="library" src="./imgs/rooms/library.webp" alt="Library" title="Library">
-                  <img id="mirror" src="./imgs/rooms/mirror.webp" alt="Mirror room" title="Mirror room">
-                  <img id="mine-cart" src="./imgs/rooms/mine-cart.webp" alt="Mine cart room" title="Mine cart room">
-                  <img id="dice" src="./imgs/rooms/dice.webp" alt="Dice room" title="Dice room">
-                  <img id="vault" src="./imgs/rooms/vault.webp" alt="Vault" title="Vault">
-                  <img id="bedroom" src="./imgs/rooms/bedroom.webp" alt="Bedroom" title="Bedroom">                                  
-                </div>
+        <div class="room-zoom">
+            <div class="square"></div>
+            <p>Room zoom</p>
+        </div>
+        </div>
+        <div class="rooms">
+            <p>Special rooms</p>
+            <div class="room-type">
+              <img id="treasure" src="./imgs/rooms/treasure.webp" alt="Treasure room" title="Treasure room">
+              <img id="boss" src="./imgs/rooms/boss.webp" alt="Boss room" title="Boss room">
+              <img id="mini-boss" src="./imgs/rooms/mini-boss.webp" alt="Mini boss room" title="Mini boss room">
+              <img id="planetarium" src="./imgs/rooms/planetarium.webp" alt="Planetarium" title="Planetarium">
+              <img id="shop" src="./imgs/rooms/shop.webp" alt="Shop" title="Shop">
+              <img id="arcade" src="./imgs/rooms/arcade.webp" alt="Arcade" title="Arcade">
+              <img id="challenge" src="./imgs/rooms/challenge.webp" alt="Challenge room" title="Challenge room">
+              <img id="boss-challenge" src="./imgs/rooms/boss-challenge.webp" alt="Boss challenge room" title="Boss challenge room">
+              <img id="curse" src="./imgs/rooms/curse.webp" alt="Curse room" title="Curse room">
+              <img id="sacrifice" src="./imgs/rooms/sacrifice.webp" alt="Sacrifice room" title="Sacrifice room">
+              <img id="secret" src="./imgs/rooms/secret.webp" alt="Secret room" title="Secret room">
+              <img id="super-secret" src="./imgs/rooms/super-secret.webp" alt="Super secret room" title="Super secret room">
+              <img id="ultra-secret" src="./imgs/rooms/ultra-secret.webp" alt="Ultra secret room" title="Ultra secret room">
+              <img id="library" src="./imgs/rooms/library.webp" alt="Library" title="Library">
+              <img id="mirror" src="./imgs/rooms/mirror.webp" alt="Mirror room" title="Mirror room">
+              <img id="mine-cart" src="./imgs/rooms/mine-cart.webp" alt="Mine cart room" title="Mine cart room">
+              <img id="dice" src="./imgs/rooms/dice.webp" alt="Dice room" title="Dice room">
+              <img id="vault" src="./imgs/rooms/vault.webp" alt="Vault" title="Vault">
+              <img id="bedroom" src="./imgs/rooms/bedroom.webp" alt="Bedroom" title="Bedroom">                                  
             </div>
-            <div class="pickups">
-                <p>Pickups</p>
-                <div class="pickup-type">
-                  <img id="red-heart" src="./imgs/pickups/red-heart.webp" alt="Red Heart" title="Red Heart">
-                  <img id="half-red-heart" src="./imgs/pickups/half-red-heart.webp" alt="Half Red Heart" title="Half Red Heart">
-                  <img id="soul-heart" src="./imgs/pickups/soul-heart.webp" alt="Soul Heart" title="Soul Heart">
-                  <img id="black-heart" src="./imgs/pickups/black-heart.webp" alt="Black Heart" title="Black Heart">
-                  <img id="eternal-heart" src="./imgs/pickups/eternal-heart.webp" alt="Eternal Heart" title="Eternal Heart">
-                  <img id="blended-heart" src="./imgs/pickups/blended-heart.webp" alt="Blended Heart" title="Blended Heart">
-                  <img id="golden-heart" src="./imgs/pickups/golden-heart.webp" alt="Golden Heart" title="Golden Heart">
-                  <img id="rotten-heart" src="./imgs/pickups/rotten-heart.webp" alt="Rotten Heart" title="Rotten Heart">
-                  <img id="bone-heart" src="./imgs/pickups/bone-heart.webp" alt="Bone Heart" title="Bone Heart">
-                  <img id="penny" src="./imgs/pickups/penny.webp" alt="Penny" title="Penny">
-                  <img id="nickel" src="./imgs/pickups/nickel.webp" alt="Nickel" title="Nickel">
-                  <img id="dime" src="./imgs/pickups/dime.webp" alt="Dime" title="Dime">
-                  <img id="lucky-penny" src="./imgs/pickups/lucky-penny.webp" alt="Lucky Penny" title="Lucky Penny">
-                  <img id="golden-penny" src="./imgs/pickups/golden-penny.webp" alt="Golden Penny" title="Golden Penny">
-                  <img id="bomb" src="./imgs/pickups/bomb.webp" alt="Bomb" title="Bomb">
-                  <img id="golden-bomb" src="./imgs/pickups/golden-bomb.webp" alt="Golden Bomb" title="Golden Bomb">
-                  <img id="key" src="./imgs/pickups/key.webp" alt="Key" title="Key">
-                  <img id="golden-key" src="./imgs/pickups/golden-key.webp" alt="Golden Key" title="Golden Key">
-                  <img id="charged-key" src="./imgs/pickups/charged-key.webp" alt="Charged Key" title="Charged Key">
-                  <img id="micro-battery" src="./imgs/pickups/micro-battery.webp" alt="Micro Battery" title="Micro Battery">
-                  <img id="battery" src="./imgs/pickups/battery.webp" alt="Battery" title="Battery">
-                  <img id="mega-battery" src="./imgs/pickups/mega-battery.webp" alt="Mega Battery" title="Mega Battery">
-                  <img id="card" src="./imgs/pickups/card.webp" alt="Card" title="Card">
-                  <img id="rune" src="./imgs/pickups/rune.webp" alt="Rune" title="Rune">
-                  <img id="pill" src="./imgs/pickups/pill.webp" alt="Pill" title="Pill">
-                  <img id="trinket" src="./imgs/pickups/trinket.webp" alt="Trinket" title="Trinket">
-                  <img id="chest" src="./imgs/pickups/chest.webp" alt="Chest" title="Chest">
-                  <img id="golden-chest" src="./imgs/pickups/golden-chest.webp" alt="Golden Chest" title="Golden Chest">
-                  <img id="red-chest" src="./imgs/pickups/red-chest.webp" alt="Red Chest" title="Red Chest">
-                  <img id="eternal-chest" src="./imgs/pickups/eternal-chest.webp" alt="Eternal Chest" title="Eternal Chest">
-                  <img id="mimic-chest" src="./imgs/pickups/mimic-chest.webp" alt="Mimic Chest" title="Mimic Chest">                                    
-                </div>
+        </div>
+        <div class="pickups">
+            <p>Pickups</p>
+            <div class="pickup-type">
+              <img id="red-heart" src="./imgs/pickups/red-heart.webp" alt="Red Heart" title="Red Heart">
+              <img id="half-red-heart" src="./imgs/pickups/half-red-heart.webp" alt="Half Red Heart" title="Half Red Heart">
+              <img id="soul-heart" src="./imgs/pickups/soul-heart.webp" alt="Soul Heart" title="Soul Heart">
+              <img id="black-heart" src="./imgs/pickups/black-heart.webp" alt="Black Heart" title="Black Heart">
+              <img id="eternal-heart" src="./imgs/pickups/eternal-heart.webp" alt="Eternal Heart" title="Eternal Heart">
+              <img id="blended-heart" src="./imgs/pickups/blended-heart.webp" alt="Blended Heart" title="Blended Heart">
+              <img id="golden-heart" src="./imgs/pickups/golden-heart.webp" alt="Golden Heart" title="Golden Heart">
+              <img id="rotten-heart" src="./imgs/pickups/rotten-heart.webp" alt="Rotten Heart" title="Rotten Heart">
+              <img id="bone-heart" src="./imgs/pickups/bone-heart.webp" alt="Bone Heart" title="Bone Heart">
+              <img id="penny" src="./imgs/pickups/penny.webp" alt="Penny" title="Penny">
+              <img id="nickel" src="./imgs/pickups/nickel.webp" alt="Nickel" title="Nickel">
+              <img id="dime" src="./imgs/pickups/dime.webp" alt="Dime" title="Dime">
+              <img id="lucky-penny" src="./imgs/pickups/lucky-penny.webp" alt="Lucky Penny" title="Lucky Penny">
+              <img id="golden-penny" src="./imgs/pickups/golden-penny.webp" alt="Golden Penny" title="Golden Penny">
+              <img id="bomb" src="./imgs/pickups/bomb.webp" alt="Bomb" title="Bomb">
+              <img id="golden-bomb" src="./imgs/pickups/golden-bomb.webp" alt="Golden Bomb" title="Golden Bomb">
+              <img id="key" src="./imgs/pickups/key.webp" alt="Key" title="Key">
+              <img id="golden-key" src="./imgs/pickups/golden-key.webp" alt="Golden Key" title="Golden Key">
+              <img id="charged-key" src="./imgs/pickups/charged-key.webp" alt="Charged Key" title="Charged Key">
+              <img id="micro-battery" src="./imgs/pickups/micro-battery.webp" alt="Micro Battery" title="Micro Battery">
+              <img id="battery" src="./imgs/pickups/battery.webp" alt="Battery" title="Battery">
+              <img id="mega-battery" src="./imgs/pickups/mega-battery.webp" alt="Mega Battery" title="Mega Battery">
+              <img id="card" src="./imgs/pickups/card.webp" alt="Card" title="Card">
+              <img id="rune" src="./imgs/pickups/rune.webp" alt="Rune" title="Rune">
+              <img id="pill" src="./imgs/pickups/pill.webp" alt="Pill" title="Pill">
+              <img id="trinket" src="./imgs/pickups/trinket.webp" alt="Trinket" title="Trinket">
+              <img id="chest" src="./imgs/pickups/chest.webp" alt="Chest" title="Chest">
+              <img id="golden-chest" src="./imgs/pickups/golden-chest.webp" alt="Golden Chest" title="Golden Chest">
+              <img id="red-chest" src="./imgs/pickups/red-chest.webp" alt="Red Chest" title="Red Chest">
+              <img id="eternal-chest" src="./imgs/pickups/eternal-chest.webp" alt="Eternal Chest" title="Eternal Chest">
+              <img id="mimic-chest" src="./imgs/pickups/mimic-chest.webp" alt="Mimic Chest" title="Mimic Chest">                                    
             </div>
         </div>
     </div>
