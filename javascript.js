@@ -3,6 +3,8 @@ const bottom = document.querySelector(".bottom");
 const roomZoom = document.querySelector(".square");
 const option = document.querySelector(".options");
 const notEntered = document.querySelector("#not-entered");
+const rooms = document.querySelector(".room-type");
+const pickups = document.querySelector(".pickup-type");
 let zoomView;
 let roomView;
 let targetPixel;
@@ -48,7 +50,15 @@ container.addEventListener('click', (e)=>{
     addZoom(targetPixel); }
 })
 
-bottom.addEventListener('click', (e)=>{
+rooms.addEventListener('click', (e)=>{
+    let targetBtn = e.target;
+    let type = targetBtn.nodeName;
+    if(type === "IMG") {
+        addIcon(targetBtn);
+    }
+}) 
+
+pickups.addEventListener('click', (e)=>{
     let targetBtn = e.target;
     let type = targetBtn.nodeName;
     if(type === "IMG") {
