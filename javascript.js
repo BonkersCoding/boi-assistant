@@ -38,14 +38,7 @@ function generatePixels(size) {
         container.appendChild(row); 
     }
 }
-/* CHANGE GRID SIZE
-function changeGrid(size) {
-    let rows = document.querySelectorAll(".row");
-    rows.forEach((row) => {container.removeChild(row)});
-    generatePixels(size);
-    pixelNumber = size;
-}
-*/
+
 
 // CLICKING A ROOM
 
@@ -173,54 +166,6 @@ roomZoom.addEventListener('click', (e)=>{
 
 })
 
-
-
-
-/*
-function addRow(coordinate) {    
-    let row = document.createElement("div");
-    row.classList.add("row");
-    for (let j = 0; j < gridSize + 1; j++) {    
-        const pixel = document.createElement("div");
-        pixel.classList.add("pixel");
-        switch (coordinate) {
-            case "first":      
-                first.forEach((room) => 
-                room.classList.remove("first"));                
-                pixel.classList.add("first");
-                break;
-            
-            case "last":
-                last.forEach((room) => 
-                room.classList.toggle("last"));
-                pixel.classList.toggle("last");
-                break;
-            
-        
-            default:
-                break;
-        }
-        row.appendChild(pixel);
-    }
-
-        switch (coordinate) {
-            case "first":
-                container.prepend(row);
-                break;
-            
-            case "last":
-                container.append(row);
-                break;
-            
-        
-            default:
-                break;
-        }
-    gridSize += 1;    
-}
-    */
-
-
 function addIcon(target) {
     let location = target.src;
     let icon = document.createElement("img");
@@ -230,8 +175,6 @@ function addIcon(target) {
     addZoom();
     
 }
-
-
 
 function removeIcon(target) {
     
@@ -269,11 +212,19 @@ function changeColor(option) {
          }        
          break;        
          case "reset-map":
-             generatePixels(3);       
+             changeGrid(3);       
              break;
     
      default: break;
     }
 }
+
+function changeGrid(size) {
+    let rows = document.querySelectorAll(".row");
+    rows.forEach((row) => {container.removeChild(row)});
+    generatePixels(size);
+   gridSize = size;
+}
+
 
 generatePixels(3);
