@@ -92,17 +92,20 @@ function addStart() {
     row.classList.add("row");
     for (let j = 0; j < gridSize; j++) {    
         let pixel = document.createElement("div");
-        pixel.classList.add("pixel");                
-        pixel.classList.add("first");
+        pixel.classList.add("pixel", "first");
+        if (j === gridSize - 1) {
+            pixel.classList.add("last");          
+        }
         row.appendChild(pixel);
     }
     container.prepend(row);
     rows = document.querySelectorAll(".row");
     rows.forEach((row) => {
-    pixel = document.createElement("div");
-    pixel.classList.add("pixel");                
-    pixel.classList.add("first");
-    row.prepend(pixel);
+    let firstPixel = document.createElement("div");
+    firstPixel.classList.add("pixel", "first");
+    row.prepend(firstPixel);
+    let lastRow = container.lastElementChild;
+    lastRow.firstElementChild.classList.add("last");
     })  
     gridSize += 1;
     
@@ -115,17 +118,20 @@ function addEnd() {
     row.classList.add("row");
     for (let j = 0; j < gridSize; j++) {    
         let pixel = document.createElement("div");
-        pixel.classList.add("pixel");                
-        pixel.classList.add("last");
+        pixel.classList.add("pixel", "last");
+        if (j === 0) {
+            pixel.classList.add("first");
+        }
         row.appendChild(pixel);
     }
     container.appendChild(row);
     rows = document.querySelectorAll(".row");
     rows.forEach((row) => {
     pixel = document.createElement("div");
-    pixel.classList.add("pixel");                
-    pixel.classList.add("last");
+    pixel.classList.add("pixel", "last");
     row.appendChild(pixel);
+    let firstRow = container.firstElementChild;
+    firstRow.lastElementChild.classList.add("first");
     })  
     gridSize += 1;
 
