@@ -101,12 +101,10 @@ function addStart() {
         let pixel = document.createElement("div");
         pixel.classList.add("pixel");                
         pixel.classList.add("first");
-        console.log("pixel added");
         row.appendChild(pixel);
     }
     container.prepend(row);
     rows = document.querySelectorAll(".row");
-    console.log(rows);
     rows.forEach((row) => {
     pixel = document.createElement("div");
     pixel.classList.add("pixel");                
@@ -115,6 +113,29 @@ function addStart() {
     })  
     gridSize += 1;
     
+}
+
+function addEnd() {
+    let last = document.querySelectorAll(".last");
+    last.forEach((room) => room.classList.remove("last"));
+    let row = document.createElement("div");
+    row.classList.add("row");
+    for (let j = 0; j < gridSize; j++) {    
+        let pixel = document.createElement("div");
+        pixel.classList.add("pixel");                
+        pixel.classList.add("last");
+        row.appendChild(pixel);
+    }
+    container.appendChild(row);
+    rows = document.querySelectorAll(".row");
+    rows.forEach((row) => {
+    pixel = document.createElement("div");
+    pixel.classList.add("pixel");                
+    pixel.classList.add("last");
+    row.appendChild(pixel);
+    })  
+    gridSize += 1;
+
 }
 
 rooms.addEventListener('click', (e)=>{
@@ -248,7 +269,7 @@ function changeColor(option) {
          }        
          break;        
          case "reset-map":
-             generatePixels(7);       
+             generatePixels(3);       
              break;
     
      default: break;
